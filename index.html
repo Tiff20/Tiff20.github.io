@@ -1,3 +1,78 @@
-Hello baby!
-I am Tiffany
-手如柔荑，肤如凝脂。领如蝤蛴，齿如瓠犀。螓首蛾眉，巧笑倩兮，美目盼兮
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			*{
+				margin: 0;
+				padding: 0;
+				list-style: none;
+			}
+			.heart{
+				width: 240px;
+				height: 230px;
+				/*border: 1px solid red;*/
+				margin: 50px auto;
+				position: relative;
+				
+				/*心跳起来*/
+				animation: putong 1s linear infinite;
+			}
+			.heart>div{
+				width: 120px;
+				height: 200px;
+				position: absolute;
+				left: 50%;
+				top: 0;
+				margin-left: -60px;
+				/*左上角 右上角圆形*/
+				border-radius: 60px 60px 0 0;
+				/*旋转基点*/
+				transform-origin: center 140px;
+				/*统一色*/
+				background-color: red;
+			}
+			.heart1{
+				/*background-color: green;*/
+				transform: rotate(-45deg);
+			}
+			.heart2{
+				/*background-color: blue;*/
+				transform: rotate(45deg);
+			}
+			
+			@keyframes putong{
+				0%{
+					transform: scale(1);
+				}
+				20%{
+					transform: scale(0.5);
+				}
+				40%{
+					transform: scale(0.8);
+				}
+				60%{
+					transform: scale(1.5);
+				}
+				80%{
+					transform: scale(1.2);
+				}
+				100%{
+					transform: scale(1);
+				}
+			}
+		</style>
+	</head>
+	<body>
+		
+		<h1>Hello baby!</h1>
+        <p>I am Tiffany<p>
+		<p>又来看我主页，你是喜欢我吗？<p>
+        <pre>手如柔荑，肤如凝脂。领如蝤蛴，齿如瓠犀。螓首蛾眉，巧笑倩兮，美目盼兮...未完待续</pre>
+         <div class="heart">
+			<div class="heart1"></div>
+			<div class="heart2"></div>
+		</div>
+	</body>
+</html>
