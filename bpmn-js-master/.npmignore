@@ -1,0 +1,13 @@
+!dist
+.github
+docs
+resources
+tasks
+test/*
+!test/util
+!test/helper
+!test/matchers
+.eslintignore
+.eslintrc
+.travis.yml
+rollup.config.js
