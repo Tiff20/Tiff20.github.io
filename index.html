@@ -62,6 +62,23 @@
 					transform: scale(1);
 				}
 			}
+			
+			input {
+			  background-color: rgb(146, 146, 231);
+			  border: 1px dotted yellow;    
+			  color: aliceblue;
+			}
+    #dv {    
+      border: 2px dotted yellow;
+      background-color: black;
+    }
+    span{
+      position: absolute;
+      font-size: 20px;
+    }
+    .cls{
+      background-color: #000;
+    }
 		</style>
 	</head>
 	<body>
@@ -69,19 +86,52 @@
 		 <center>
 		 <h1>Hello baby!</h1>
          <p>I am Tiffany<p>
-		 <p>又来看我主页，你是喜欢我吗？<p>
+		 </center> 
+		 <marquee  direction="right"  behavior="alternate"  scrollamount="15"  scrolldelay="10"  loop="1000"    height="100"  >
+			<font  face="隶书"  color="#ff99cc"  size="5">又来看我主页，你是喜欢我吗？</font>
+		</marquee>
          <pre>
 		 
-		 帅气美丽的你手如柔荑，肤如凝脂。
-		 领如蝤蛴，齿如瓠犀。
-		 螓首蛾眉，巧笑倩兮，美目盼兮。
-		 未完待续...
+
+		                                                                                                                                                                    未完待续...
 		 
 		 </pre>
-		 </center> 
          <div class="heart">
 			<div class="heart1"></div>
 			<div class="heart2"></div>
 		</div>
+		
+		<input type="button" value="点我有惊喜" id="off"  class="cls">
+		<input type="button" name="" id="star" value="星辰大海">
+		<div id="dv">
+		</div>
+		<script src="common.js"></script>
+		<script>
+		   document.getElementById("off").onclick=function(){
+			 document.body.className=document.body.className!="cls"?"cls":"";
+		   }
+			document.getElementById("star").onclick = function () {   
+			   setInterval(function () {       
+				document.getElementById("dv").innerHTML="<span>❤</span>";
+				var span=document.querySelector("span");
+				var dv=document.getElementById("dv");
+
+				for(i=0;i<100;i++){
+				  var sp= span.cloneNode(true);
+				   dv.appendChild(sp);
+
+				   var r = parseInt(Math.random() *256);
+				   var g = parseInt(Math.random() * 256); 
+				   var b = parseInt(Math.random() * 256);
+				   var y = parseInt(Math.random() * 1240);
+				   var x = parseInt(Math.random() *600);
+
+				   document.getElementById("dv").firstElementChild.style.color="rgb("+r+","+g+","+b+")";
+				   document.getElementById("dv").firstElementChild.style.left = y + "px";
+				   document.getElementById("dv").firstElementChild.style.top = x + "px";
+				}       
+			  },500);    
+			};
+		  </script>
 	</body>
 </html>
