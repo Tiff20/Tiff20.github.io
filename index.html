@@ -81,11 +81,20 @@
     .cls{
       background-color: #000;
     }
+	
+	
+	
 		</style>
 	</head>
 	<body>
 		
-		 <center>
+		<input type="button" value="点我有惊喜" id="off"  class="cls">
+		<input type="button" name="" id="star" value="一闪一闪亮晶晶">
+		<div id="dv">
+		</div>
+		
+		
+		 <center> 
 		 <h1>Hello baby!</h1>
          <p>I am Tiffany<p>
 		 </center> 
@@ -103,10 +112,7 @@
 			<div class="heart2"></div>
 		</div>
 		
-		<input type="button" value="点我有惊喜" id="off"  class="cls">
-		<input type="button" name="" id="star" value="星辰大海">
-		<div id="dv">
-		</div>
+				
 		<script src="common.js"></script>
 		<script>
 		   document.getElementById("off").onclick=function(){
@@ -125,8 +131,8 @@
 				   var r = parseInt(Math.random() *256);
 				   var g = parseInt(Math.random() * 256); 
 				   var b = parseInt(Math.random() * 256);
-				   var y = parseInt(Math.random() * 1240);
-				   var x = parseInt(Math.random() *600);
+				   var y = parseInt(Math.random() * 1920);
+				   var x = parseInt(Math.random() *1080);
 
 				   document.getElementById("dv").firstElementChild.style.color="rgb("+r+","+g+","+b+")";
 				   document.getElementById("dv").firstElementChild.style.left = y + "px";
@@ -135,5 +141,6 @@
 			  },500);    
 			};
 		  </script>
+		   
 	</body>
 </html>
